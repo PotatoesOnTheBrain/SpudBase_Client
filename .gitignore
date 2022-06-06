@@ -1,5 +1,6 @@
-# Created by https://www.toptal.com/developers/gitignore/api/react,macos,visualstudiocode,git,node
-# Edit at https://www.toptal.com/developers/gitignore?templates=react,macos,visualstudiocode,git,node
+
+# Created by https://www.toptal.com/developers/gitignore/api/linux,macos,visualstudiocode,node,react,git
+# Edit at https://www.toptal.com/developers/gitignore?templates=linux,macos,visualstudiocode,node,react,git
 
 ### Git ###
 # Created by git for backups. To disable backups in Git:
@@ -15,6 +16,21 @@
 *_BASE_*.txt
 *_LOCAL_*.txt
 *_REMOTE_*.txt
+
+### Linux ###
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
 
 ### macOS ###
 # General
@@ -227,6 +243,5 @@ sketch
 # Ignore code-workspaces
 *.code-workspace
 
-# End of https://www.toptal.com/developers/gitignore/api/react,macos,visualstudiocode,git,node
-
+# End of https://www.toptal.com/developers/gitignore/api/linux,macos,visualstudiocode,node,react,git
 build/
