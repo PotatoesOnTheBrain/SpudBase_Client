@@ -15,3 +15,13 @@
 .Bio {
 
 }
+
+.Name {
+    display: flex;
+    flex-direction: row;
+}
+
+.Links {
+    display: flex;
+    flex-direction: row;
+}

@@ -23,12 +23,16 @@ function Profile() {
       </div>
 
       <div className="Bio">
+        <div className="Name">
         <h3>FirstName</h3>
         <h3>LastName</h3>
+        </div>
         <button>Go to Github</button>
+        <div className="Links">
         <p>Bio</p>
         <p>102 Followers</p>
         <p>72 Following</p>
+        </div>
         <div>
           <h4>This is a bio blurb talking all about myself.</h4>
         </div>
