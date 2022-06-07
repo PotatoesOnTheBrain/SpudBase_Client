@@ -1,0 +1,17 @@
+.Profile {
+    display: flex;
+    flex-direction: row;
+}
+
+.Repos {
+    flex: 40%;
+}
+
+.Messages {
+    grid-column: auto;
+    flex: 40%;
+}
+
+.Bio {
+
+}
