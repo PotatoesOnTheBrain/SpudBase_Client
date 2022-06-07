@@ -1,0 +1,11 @@
+
+* {
+    background-color: beige;
+}
+.OurTeam {
+    color: turquoise;
+}
+ .photo1, .photo2, .photo3 {
+    border-radius: 50%;
+    max-width: 150px
+}
