@@ -1,28 +1,25 @@
 import "../Profile.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function Profile() {
     console.log(document.cookie)
     console.log(document.cookie.split("=")[1]);
+
+    const [userProfileData, setUserProfileData] = useState({})
+
+
     useEffect(()=> {
         fetch("http://127.0.0.1:8080/user/userinfo", {
             method: "POST",
-            body: JSON.stringify({
-                session_id: document.cookie.split("=")[1]
-            })
-        
-            })
-            .then(response =>{
-              response.json()
-            })
-            .then(data =>{
-                console.log(data)
-            })
-            
-        
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({session_id: document.cookie.split("=")[1]})
+        })
+          .then(response => response.json())
+          .then(data => setUserProfileData(data))
+          .catch(error => {
+            console.log(error)
+          })
     }, [])
-    
-
 
   return (
     <div className="Profile">
@@ -50,6 +47,7 @@ function Profile() {
         <h3>FirstName</h3>
         <h3>LastName</h3>
         </div>
+        <img src={userProfileData.avatar_url? userProfileData.avatar_url : ""} />
         <button>Go to Github</button>
         <div className="Links">
         <p>Bio</p>
