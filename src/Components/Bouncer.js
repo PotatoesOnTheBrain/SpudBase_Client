@@ -13,12 +13,16 @@ const Bouncer = () => {
        return(false);
     }
 
-    // useEffect(() => {
-    //     fetch(`https://github.com/login/oauth/access_token?code=${getQueryVariable("code")}&client_id=26d9e4b571324e3c62bd&client_secret=8f2c783b072778f70c463a1ef689e3b7c6a6a103`, {
-    //         method: "POST"
-    //     })
-    //     .then(response => console.log(response));
-    // })
+    useEffect(() => {
+        fetch(`http://127.0.0.1:8080/oauth/authorize?code=${getQueryVariable("code")}`)
+        .then(response => response.json())
+        .then(data => {
+            if(data.session_id) {
+                document.cookie = `session_id=${data.session_id}`;
+                console.log(document.cookie.split("=")[1]);
+            }
+        })
+    })
 
     return (
         <div className="bouncer">
