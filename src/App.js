@@ -12,6 +12,8 @@ function App() {
     <div className="App">
       <header>
         <nav>
+          <h1>SpudBase</h1>
+          <h3> — Developers Welcome</h3>
           <ul>
             <li>
               <Link to="/login"> Login </Link>
