@@ -12,12 +12,14 @@ function App() {
     <div className="App">
       <header>
         <nav>
+          <h1 className="Spudbase">SpudBase</h1>
+          <h3 className="Developers"> — Developers Welcome</h3>
           <ul>
             <li>
               <Link to="/login"> Login </Link>
               <Link to="/profile"> Profile </Link>
               <Link to="/theteam"> The Team </Link>
-              <Link to="/convo"> Convo's </Link>
+              <Link to="/convo"> Convos </Link>
             </li>
           </ul>
         </nav>
