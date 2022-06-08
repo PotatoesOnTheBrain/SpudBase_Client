@@ -2,21 +2,41 @@
   text-align: center;
 }
 
+/* header {
+  padding: -10px;
+} */
+
 nav {
   display: flex;
   flex-direction: row;
+  background-color: green;
 }
 
-h3 {
+.Spudbase {
+  background-color: green;
+  color: rgb(248, 178, 0);
+  font-size: 40px;
+  padding-left: 10px;
+}
+
+.Developers {
   padding: 5px;
+  background-color: green;
+  color: white;
+  padding-top: 20px;
+  font-size: 25px;
 }
 
 ul {
   list-style: none;
-  padding: 10px
+  padding: 10px;
+  background-color: green;
+  padding-top: 35px;
 }
 
 a {
   padding: 10px;
   text-decoration: none;
+  background-color: green;
+  color: white;
 }
