@@ -1,6 +1,29 @@
 import "../Profile.css";
+import { useEffect } from "react";
 
 function Profile() {
+    console.log(document.cookie)
+    console.log(document.cookie.split("=")[1]);
+    useEffect(()=> {
+        fetch("http://127.0.0.1:8080/user/userinfo", {
+            method: "POST",
+            body: JSON.stringify({
+                session_id: document.cookie.split("=")[1]
+            })
+        
+            })
+            .then(response =>{
+              response.json()
+            })
+            .then(data =>{
+                console.log(data)
+            })
+            
+        
+    }, [])
+    
+
+
   return (
     <div className="Profile">
       <div className="Repos">
