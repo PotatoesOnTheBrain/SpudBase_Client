@@ -3,6 +3,7 @@ import Convo from './Components/Convo';
 import Login from './Components/Login';
 import Profile from './Components/Profile';
 import TheTeam from './Components/TheTeam';
+import Bouncer from './Components/Bouncer';
 import {Link, Routes, Route, Navigate} from "react-router-dom";
 
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/profile" element={<Profile/>}/>
         <Route path="/theteam" element={<TheTeam/>}/>
         <Route path="/convo" element={<Convo/>}/>
+        <Route path ="/bouncer" element={<Bouncer/>}/>
       </Routes>
     </div>
   );
