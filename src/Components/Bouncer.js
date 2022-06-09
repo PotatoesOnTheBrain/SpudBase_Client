@@ -1,6 +1,9 @@
 import { useEffect } from "react";
+import { useNavigate } from "react-router";
 
 const Bouncer = () => {
+
+    let navigate = useNavigate();
 
     function getQueryVariable(variable)
     {
@@ -19,7 +22,7 @@ const Bouncer = () => {
         .then(data => {
             if(data.session_id) {
                 document.cookie = `session_id=${data.session_id}`;
-                console.log(document.cookie.split("=")[1]);
+                navigate("/profile");
             }
         })
     })
