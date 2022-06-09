@@ -11,13 +11,13 @@ import { useEffect } from 'react';
 
 function App() {
 
-let navigate = useNavigate();
+// let navigate = useNavigate();
 
-useEffect(() => {
-if (!document.cookie.split("=")[1]) {
-  navigate('/login')
-}
-}, [])
+// useEffect(() => {
+// if (!document.cookie.split("=")[1]) {
+//   navigate('/login')
+// }
+// }, [])
 
 
   return (
@@ -39,6 +39,7 @@ if (!document.cookie.split("=")[1]) {
 
 
       <Routes>
+        <Route path="/" element={document.cookie.split("=")[1] ? <Navigate to="/profile"/> : <Navigate to="/login"/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/profile" element={<Profile/>}/>
         <Route path="/theteam" element={<TheTeam/>}/>

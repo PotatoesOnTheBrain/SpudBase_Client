@@ -1,7 +1,17 @@
 import "../Profile.css";
 import { useEffect, useState } from "react";
-
+import { useNavigate} from "react-router";
 function Profile() {
+
+  let navigate = useNavigate();
+
+  useEffect(() => {
+  if (!document.cookie.split("=")[1]) {
+    navigate('/login')
+  }
+  }, [])
+  
+
     console.log(document.cookie)
     console.log(document.cookie.split("=")[1]);
 
