@@ -19,12 +19,12 @@ function TheTeam() {
         {/* </div> */}
       <div ClassName="Danny">
         <h3>Danny Kwolek</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor fringilla metus, id pellentesque odio lacinia id. Vivamus ac blandit urna, eget fringilla ante. Aenean in fermentum odio. Praesent hendrerit eleifend bibendum. Aliquam tincidunt mauris sit amet dolor tincidunt ultrices. Etiam ligula turpis, elementum in porta a, facilisis ut quam. Suspendisse ac sapien odio.</p>
+            <p>My goal is to become a full scale systems architect. I love planning out every piece of the puzzle to make a bigger picture that is worth looking at.</p>
       </div>
       
       <div ClassName="Andre">
         <h3>Andre Booth</h3>
-            <p> My interest in the project was the front-end layout specifically with React and hooking up the different api key value pairs for the profile </p>
+            <p>My goal is to be a full stack developer. My interests are playing basketball and connecting with people.</p>
       </div>
 
       <div ClassName="Andrew">
