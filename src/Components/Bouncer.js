@@ -25,6 +25,7 @@ const Bouncer = () => {
                 navigate("/profile");
             }
         })
+        .catch(error => console.log(error))
     })
 
     return (
