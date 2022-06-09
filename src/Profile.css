@@ -17,11 +17,30 @@
 }
 
 .Name {
-    display: flex;
-    flex-direction: row;
+    /* display: flex;
+    flex-direction: row; */
+
 }
 
 .Links {
     display: flex;
     flex-direction: row;
+}
+
+.img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 50%;
+    max-width: 150px
+}
+
+.button {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 12px;
+    color: white;
+    background-color: green;
 }

@@ -15,7 +15,11 @@ function Profile() {
             body: JSON.stringify({session_id: document.cookie.split("=")[1]})
         })
           .then(response => response.json())
-          .then(data => setUserProfileData(data))
+        //   .then(data => setUserProfileData(data))
+          .then(data => {
+            setUserProfileData(data)
+            console.log(data)
+            })
           .catch(error => {
             console.log(error)
           })
@@ -35,7 +39,7 @@ function Profile() {
         </p>
       </div>
       <div className="Messages">
-        <button>New Message</button>
+        <button className="button" >New Message</button>
         <div className="Message1">
           <p>From GithubUser</p>
           <p>This is a message! I have so much to say.</p>
@@ -44,18 +48,25 @@ function Profile() {
 
       <div className="Bio">
         <div className="Name">
-        <h3>FirstName</h3>
-        <h3>LastName</h3>
+        <h3>{userProfileData.name? userProfileData.name : "Loading firstname"}</h3>
+        {/* <h3>LastName</h3> */}
         </div>
-        <img src={userProfileData.avatar_url? userProfileData.avatar_url : ""} />
-        <button>Go to Github</button>
+        <img className="img" src={userProfileData.avatar_url? userProfileData.avatar_url : ""} />
+        <button className="button">Go to Github</button>
         <div className="Links">
-        <p>Bio</p>
-        <p>102 Followers</p>
-        <p>72 Following</p>
+        {/* <p>Bio</p> */}
+        
         </div>
         <div>
-          <h4>This is a bio blurb talking all about myself.</h4>
+          <h4>Bio: {userProfileData.bio? userProfileData.bio : "Loading Bio"}</h4>
+          {/* <h4>{userProfileData.followers_url? userProfileData.followers_url : "Loading followers"}</h4>
+          <h4>{userProfileData.following_url? userProfileData.following_url : "Loading following"}</h4> */}
+          <h4>Location: {userProfileData.location? userProfileData.location : "Loading location"}</h4>
+          <h4>Twitter: {userProfileData.twitter_username? userProfileData.twitter_username : "Loading twitter"}</h4>
+          <h3>Followers: {userProfileData.followers? userProfileData.followers : "Loading followers"}</h3>
+           <h3>Following: {userProfileData.following? userProfileData.following : "Loading following"}</h3>
+          <h4>Public Repos: {userProfileData.public_repos? userProfileData.public_repos : "Loading public repos"}</h4>
+
         </div>
       </div>
     </div>
