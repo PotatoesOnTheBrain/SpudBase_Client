@@ -5,9 +5,21 @@ import Profile from './Components/Profile';
 import TheTeam from './Components/TheTeam';
 import Bouncer from './Components/Bouncer';
 import {Link, Routes, Route, Navigate} from "react-router-dom";
+import { useNavigate } from 'react-router';
+import { useEffect } from 'react';
 
 
 function App() {
+
+let navigate = useNavigate();
+
+useEffect(() => {
+if (!document.cookie.split("=")[1]) {
+  navigate('/login')
+}
+}, [])
+
+
   return (
     <div className="App">
       <header>
