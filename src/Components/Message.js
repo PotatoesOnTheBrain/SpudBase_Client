@@ -1,11 +1,10 @@
-
-
+import { API_BASE_URL } from "../apiURL";
 
 const Message = (props) => {
     console.log(props)
     const handleOnDelete = () => {
     console.log("delete id=",props.data._id)
-    fetch(`http://127.0.0.1:8080/message/${document.cookie.split("=")[1]}/${props.data._id}`, {method:"DELETE"})
+    fetch(`${API_BASE_URL}message/${document.cookie.split("=")[1]}/${props.data._id}`, {method:"DELETE"})
 
 
     }
