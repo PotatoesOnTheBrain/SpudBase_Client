@@ -1,4 +1,4 @@
-import "../Convo.css";
+import "../Styling/Convo.css";
 import { useEffect, useState } from "react";
 import Message from './Message';
 import { useNavigate } from "react-router";
@@ -25,7 +25,7 @@ function Convo() {
   }, []);
 
   let messageArray = messageData.map((value) => {
-    return <Message data={value}/>;
+    return <Message data={value} key={value._id}/>;
   })
 
   const handleOnChange = (event) => {
@@ -46,7 +46,6 @@ function Convo() {
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
-    console.log("receivers= ", receiversInputString.split(","), "\nsubject= ", subjectInputString, "\nbody= ", bodyInputString)
     fetch(`${API_BASE_URL}message/${document.cookie.split("=")[1]}`, {
       method: "POST",
       body: JSON.stringify({
@@ -67,9 +66,9 @@ function Convo() {
     <div className="Convo">
      <h1>Conversations</h1>
      <form onSubmit={handleOnSubmit}>
-       <input id="receiversInput" type="text" placeholder="Receivers (comma separated)" value={receiversInputString} onChange={handleOnChange} />
-       <input id="subjectInput" type="text" placeholder="Subject" value={subjectInputString} onChange={handleOnChange} />
-       <input id="bodyInput" type="text" placeholder="Message" value={bodyInputString} onChange={handleOnChange} />
+       <textarea id="receiversInput" type="text" placeholder="Receivers (comma separated)" value={receiversInputString} onChange={handleOnChange} />
+       <textarea id="subjectInput" type="text" placeholder="Subject" value={subjectInputString} onChange={handleOnChange} />
+       <textarea id="bodyInput" type="text" placeholder="Message" value={bodyInputString} onChange={handleOnChange} />
        <input id="submitInput" type="submit" value="Submit" />
      </form>
      {messageArray}

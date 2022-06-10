@@ -1,26 +1,26 @@
 .Profile {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
-.Repos {
+/* .Repos {
     flex: 40%;
-}
+} */
 
-.Messages {
+/* .Messages {
     grid-column: auto;
     flex: 40%;
-}
+} */
 
-.Bio {
+/* .Bio {
 
-}
+} */
 
-.Name {
-    /* display: flex;
-    flex-direction: row; */
+/* .Name {
+    display: flex;
+    flex-direction: row;
 
-}
+} */
 
 .Links {
     display: flex;
