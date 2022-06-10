@@ -4,7 +4,7 @@ import { CLIENT_ID } from "../clientId";
 function Login() {
   /* if we have a session cookie, redirect to profile page
   */
-  let redirectURI = `${SELF_URL}bouncer`
+  let redirectURI = `${SELF_URL}`
   let OAuthURL = `https://github.com/login/oauth/authorize?client_id=${CLIENT_ID}&state=thisisaveryrandomandsecurestring&redirect_uri=${redirectURI}`
   
   return (
