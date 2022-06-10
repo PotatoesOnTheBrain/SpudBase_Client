@@ -1,0 +1,1 @@
+export let CLIENT_ID = (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1:3000")? "26d9e4b571324e3c62bd": "c848e1047b65bb493da1";
