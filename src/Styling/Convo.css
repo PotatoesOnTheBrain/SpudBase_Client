@@ -7,3 +7,11 @@ form {
 input {
     resize: both;
 }
+
+.Message {
+    padding: 40px;
+    border: 2px solid rgba(0,0,0,0.2);
+    border-radius: 16px;
+    margin: 20px 15vw;
+    box-shadow: 5px 5px 5px;
+}

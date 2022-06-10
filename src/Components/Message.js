@@ -40,10 +40,10 @@ const Message = (props) => {
     }
 
     return (
-        <div>
+        <div className="Message">
             <p>This is a message!</p>
             <p>from: {props.data.author}</p>
-            <p>to: {props.data.receivers}</p>
+            <p>to: {props.data.receivers.join(", ")}</p>
             <p>subject: {props.data.subject}</p>
             {props.data.canDelete? editForm: <p>message: {messageBody}</p>}
             {props.data.canDelete? <button onClick={handleOnDelete}>Delete</button>: ""}
