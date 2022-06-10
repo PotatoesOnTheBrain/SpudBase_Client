@@ -1,4 +1,4 @@
-import "../Profile.css";
+import "../Styling/Profile.css";
 import { useEffect, useState } from "react";
 import { useNavigate} from "react-router";
 import { API_BASE_URL } from "../apiURL";
@@ -38,8 +38,8 @@ function Profile() {
     }, [])
 
   return (
-    <div className="Profile">
-      <div className="Repos">
+    <div className="profileDiv">
+      <div className="profileReposDiv">
         <h3>Repository 1</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor
