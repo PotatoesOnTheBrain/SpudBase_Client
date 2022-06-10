@@ -1,8 +1,7 @@
 import "../Styling/TheTeam.css"
-import image from "../profile_picture.png"
-import image1 from "../Danny_photo.png"
-import image2 from "../Andre_pic.jpg"
-import image3 from "../Andrew_photo.jpg"
+import image1 from "../Assets/Danny_photo.png"
+import image2 from "../Assets/Andre_pic.jpg"
+import image3 from "../Assets/Andrew_photo.jpg"
 
 
 function TheTeam() {
