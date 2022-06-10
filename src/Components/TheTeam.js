@@ -1,4 +1,4 @@
-import "../TheTeam.css"
+import "../Styling/TheTeam.css"
 import image from "../profile_picture.png"
 import image1 from "../Danny_photo.png"
 import image2 from "../Andre_pic.jpg"

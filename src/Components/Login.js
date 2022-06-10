@@ -1,6 +1,9 @@
+import "../Styling/Login.css"
 import { useEffect } from "react";
 import { SELF_URL } from "../selfURL";
 import { CLIENT_ID } from "../clientId";
+
+
 function Login() {
   /* if we have a session cookie, redirect to profile page
   */
@@ -9,7 +12,8 @@ function Login() {
   
   return (
     <div className="Login">
-      <a href={OAuthURL}>Log In</a>
+      <img src={require("../Assets/SpudBase.png")} />
+      {document.cookie.split("=")[1]? <p>you are logged in</p> : <a href={OAuthURL}>Log In</a> }
     </div>
   )
 }

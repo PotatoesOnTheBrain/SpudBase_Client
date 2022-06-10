@@ -1,0 +1,9 @@
+.Login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Login img{
+    height: 30vh;
+    width: 30vh;
+}

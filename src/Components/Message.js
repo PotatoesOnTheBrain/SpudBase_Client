@@ -30,7 +30,7 @@ const Message = (props) => {
 
     let editForm = (
         <form onSubmit={handleOnSubmit}>
-            <input type="text" id="messageBodyInput" placeholder="Message Body" value={messageBody} onChange={handleOnChange}/>
+            <textarea type="text" id="messageBodyInput" placeholder="Message Body" value={messageBody} onChange={handleOnChange}/>
             <input type="submit" id="messageSubmitInput" value="Submit" />
         </form>
     )
