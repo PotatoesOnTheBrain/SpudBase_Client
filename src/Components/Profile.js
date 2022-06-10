@@ -1,6 +1,8 @@
 import "../Profile.css";
 import { useEffect, useState } from "react";
 import { useNavigate} from "react-router";
+import { API_BASE_URL } from "../apiURL";
+
 function Profile() {
 
   let navigate = useNavigate();
@@ -19,7 +21,7 @@ function Profile() {
 
 
     useEffect(()=> {
-        fetch("http://127.0.0.1:8080/user/userinfo", {
+        fetch(`${API_BASE_URL}user/userinfo`, {
             method: "POST",
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({session_id: document.cookie.split("=")[1]})

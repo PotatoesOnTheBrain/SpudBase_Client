@@ -2,6 +2,7 @@ import "../Convo.css";
 import { useEffect, useState } from "react";
 import Message from './Message';
 import { useNavigate } from "react-router";
+import { API_BASE_URL } from "../apiURL";
 
 function Convo() {
   const [messageData, setMessageData] = useState([]);
@@ -17,7 +18,7 @@ function Convo() {
       navigate('/login')
       return;
     }
-    fetch(`http://127.0.0.1:8080/message/${document.cookie.split("=")[1]}`)
+    fetch(`${API_BASE_URL}message/${document.cookie.split("=")[1]}`)
     .then(response => response.json())
     .then(data => setMessageData(data.messages))
     .catch(error => console.log(error));
@@ -46,7 +47,7 @@ function Convo() {
   const handleOnSubmit = (event) => {
     event.preventDefault();
     console.log("receivers= ", receiversInputString.split(","), "\nsubject= ", subjectInputString, "\nbody= ", bodyInputString)
-    fetch(`http://127.0.0.1:8080/message/${document.cookie.split("=")[1]}`, {
+    fetch(`${API_BASE_URL}message/${document.cookie.split("=")[1]}`, {
       method: "POST",
       body: JSON.stringify({
         receivers: receiversInputString.split(","),

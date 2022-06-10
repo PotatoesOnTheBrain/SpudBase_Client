@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router";
+import { API_BASE_URL } from "../apiURL";
 
 const Bouncer = () => {
 
@@ -17,7 +18,7 @@ const Bouncer = () => {
     }
 
     useEffect(() => {
-        fetch(`http://127.0.0.1:8080/oauth/authorize?code=${getQueryVariable("code")}`)
+        fetch(`${API_BASE_URL}oauth/authorize?code=${getQueryVariable("code")}`)
         .then(response => response.json())
         .then(data => {
             if(data.session_id) {
