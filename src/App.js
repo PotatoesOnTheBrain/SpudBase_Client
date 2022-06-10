@@ -39,7 +39,7 @@ function App() {
 
 
       <Routes>
-        <Route path="/" element={document.cookie.split("=")[1] ? <Navigate to="/profile"/> : <Navigate to="/login"/>}/>
+        <Route path="/" element={document.cookie.split("=")[1] ? <Navigate to="/profile"/> : (window.location.search.includes("code")? <Navigate to={`/bouncer${window.location.search}`}/> : <Navigate to="/login"/>)}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/profile" element={<Profile/>}/>
         <Route path="/theteam" element={<TheTeam/>}/>
