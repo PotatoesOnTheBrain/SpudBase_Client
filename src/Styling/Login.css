@@ -1,0 +1,11 @@
+.loginDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginDiv img {
+    height: 20vw;
+    width: 20vw;
+}
