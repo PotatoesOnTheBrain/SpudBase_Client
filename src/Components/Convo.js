@@ -25,7 +25,7 @@ function Convo() {
   }, []);
 
   let messageArray = messageData.map((value) => {
-    return <Message data={value}/>;
+    return <Message data={value} key={value._id}/>;
   })
 
   const handleOnChange = (event) => {
@@ -46,7 +46,6 @@ function Convo() {
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
-    console.log("receivers= ", receiversInputString.split(","), "\nsubject= ", subjectInputString, "\nbody= ", bodyInputString)
     fetch(`${API_BASE_URL}message/${document.cookie.split("=")[1]}`, {
       method: "POST",
       body: JSON.stringify({
