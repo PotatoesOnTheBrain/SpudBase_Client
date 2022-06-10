@@ -1,0 +1,58 @@
+
+* {
+    background-color: beige;
+}
+.OurTeam {
+    color: turquoise;
+}
+ .photo1, .photo2, .photo3 {
+    border-radius: 50%;
+    max-width: 150px
+}
+
+.TheTeam {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.photo1 {
+grid-row: 1/2;
+grid-column: 1/2;
+}
+
+.Danny {
+grid-row: 2/3;
+grid-column: 1/2;
+}
+
+.photo1, .photo2, .photo3 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.Danny {
+    padding: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+    .TheTeam {
+        display: grid;
+        grid-template-columns: 1;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .photo1 {
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+
+    .Danny {
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+    
+}
